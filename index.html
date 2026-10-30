@@ -1,1 +1,168 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AY STAR DESIGN</title>
+<style>
+body {
+  margin: 0;
+  background: #0c0c0e;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+header {
+  padding: 35px 15px;
+  background: #171717;
+  border-bottom: 2px solid gold;
+}
+.star {
+  font-size: 65px;
+  color: gold;
+}
+h1, h2 {
+  color: gold;
+}
+section {
+  padding: 25px 15px;
+}
+.card {
+  background: #1c1c1c;
+  border: 1px solid #b99a36;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 400px;
+}
+.price {
+  color: gold;
+  font-weight: bold;
+}
+button, .button {
+  background: gold;
+  color: black;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 7px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+input, select, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin: 8px 0;
+  background: #101010;
+  color: white;
+  border: 1px solid gold;
+  border-radius: 6px;
+}
+footer {
+  background: #171717;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="star">★</div>
+<h1>AY STAR DESIGN</h1>
+<p>CREATIVITY MEETS EXCELLENCE</p>
+</header>
+
+<section>
+<h2>Your Vision, Our Creativity</h2>
+<p>Professional graphics design for businesses, events and individuals.</p>
+<a class="button" href="#order">Order Your Design</a>
+</section>
+
+<section>
+<h2>Our Services</h2>
+
+<div class="card">
+<h3>🎨 Logo Design</h3>
+<p>Give your business a unique identity.</p>
+<p class="price">From ₦3,000</p>
+</div>
+
+<div class="card">
+<h3>📢 Flyers and Posters</h3>
+<p>Beautiful promotional designs.</p>
+<p class="price">From ₦2,000</p>
+</div>
+
+<div class="card">
+<h3>💳 Business Cards</h3>
+<p>Professional business card designs.</p>
+<p class="price">From ₦2,000</p>
+</div>
+
+<div class="card">
+<h3>🎉 Birthday Designs</h3>
+<p>Celebrate special moments in style.</p>
+<p class="price">From ₦2,000</p>
+</div>
+</section>
+
+<section id="order">
+<h2>Place Your Order</h2>
+
+<div class="card">
+<form onsubmit="sendOrder(event)">
+<input id="customer" placeholder="Your name" required>
+
+<select id="service">
+<option>Logo Design</option>
+<option>Flyer or Poster</option>
+<option>Business Card</option>
+<option>Birthday Design</option>
+<option>Other Design</option>
+</select>
+
+<textarea id="details"
+placeholder="Describe the design you want"
+required></textarea>
+
+<button type="submit">Order on WhatsApp</button>
+</form>
+</div>
+</section>
+
+<section>
+<h2>Contact AY STAR DESIGN</h2>
+<p>Ready to bring your ideas to life?</p>
+<a class="button"
+href="https://wa.me/2348064360579">
+Chat with us on WhatsApp
+</a>
+</section>
+
+<footer>
+<p>© 2026 AY STAR DESIGN</p>
+<p>Your Vision, Our Creativity ⭐</p>
+</footer>
+
+<script>
+function sendOrder(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('customer').value;
+  const service = document.getElementById('service').value;
+  const details = document.getElementById('details').value;
+
+  const message =
+    "Hello AY STAR DESIGN! My name is " + name +
+    ". I want " + service + ". Details: " + details;
+
+  window.location.href =
+    "https://wa.me/2348064360579?text=" +
+    encodeURIComponent(message);
+}
+</script>
+
+</body>
+</html>
